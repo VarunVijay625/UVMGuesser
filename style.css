@@ -7,3 +7,11 @@
     background-size: cover;
     height: 100vh;
 }
+h1 {
+    color:darkslateblue;
+    font-size: 600%;
+    font-weight: 700;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-left: 40px;
+    padding-top: 40px;
+}
