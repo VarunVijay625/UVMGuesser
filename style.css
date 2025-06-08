@@ -15,6 +15,31 @@ h1 {
     padding-left: 40px;
     padding-top: 40px;
 }
-.mainbtn{
-    
+.mainbtn {
+    color:black;
+    display:flex;
+    margin: auto;
+    font-size: 450%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:green;
+    transition: 400ms;
+    padding: 10px;
+    border-radius: 15%;
+    margin-top: 540px
+}
+.mainbtn:hover {
+    background-color:limegreen;
+    cursor: pointer;
+}
+.otherbtn{
+    color:black;
+    display:flex;
+    margin-left: 100px;
+    font-size: 450%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:green;
+    transition: 400ms;
+    padding: 10px;
+    border-radius: 15%;
+    margin-top: 540px
 }
