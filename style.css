@@ -18,7 +18,7 @@ h1 {
 .mainbtn {
     color:black;
     display:flex;
-    margin: auto;
+    margin-left: 500px;
     font-size: 450%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:green;
@@ -33,13 +33,17 @@ h1 {
 }
 .otherbtn{
     color:black;
-    display:flex;
-    margin-left: 100px;
+    display:block;
+    margin-top: -107px;
+    margin-left: 1000px;
     font-size: 450%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:green;
     transition: 400ms;
     padding: 10px;
     border-radius: 15%;
-    margin-top: 540px
+}
+.otherbtn:hover {
+    background-color:limegreen;
+    cursor: pointer;
 }
