@@ -7,16 +7,22 @@ function initMap() {
         mapTypeId: 'satellite'
     });
 
-    map.addListener("click", (event) => {
-        new google.maps.Marker({
-          position: event.latLng,
-          map: map,
-        });
-    });
+    // map.addListener("click", (event) => {
+    //     new google.maps.Marker({
+    //       position: event.latLng,
+    //       map: map,
+    //     });
+    // });
 
-    map.addListener('click', function(event) {
-        lat = event.latLng.lat();
-        lng = event.latLng.lng();
-        console.writeLine('Latitude: ' + lat + 'Longitude: ' + lng);
-    });
+    // map.addListener('click', function(event) {
+    //     lat = event.latLng.lat();
+    //     lng = event.latLng.lng();
+    //     console.writeLine('Latitude: ' + lat + 'Longitude: ' + lng);
+    // });
+}
+
+map.addEventListener("click", doSomething)
+
+function doSomething(){
+    alert('Hiiii');
 }
