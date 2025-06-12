@@ -1,32 +1,29 @@
 let map;
 
-async function initMap() {
-
-    const { Map } = await google.maps.importLibrary("maps");
-    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-
-    map = new Map(document.getElementById("map"), {
+function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 44.4781, lng: -73.1975 },
         zoom: 16,
         mapTypeId: 'satellite'
     });
 
+    map.AdvancedMarkerElement({
+        position: { lat: 44.4781, lng: -73.1975 },
+        map : map
+    });
+
     map.addListener("click", function(event){
         var x = event.latLng.lat();
         var y = event.latLng.lng()
-        alert(x + " " + y);
+        alert(x + " and also " + y);
         //marker.se
     });
 
-    // var marker = new AdvancedMarkerElement({
-    //     map : map,
-    //     position: { lat: 44.4781, lng: -73.1975 },
-    //     title: 'Guess',
-    // });
 
-    function setPosition({ x, y }){
-        marker.position = { lat: x, lng: y }
-    }
+
+    // function setPosition({ x, y }){
+    //     marker.position = { lat: x, lng: y }
+    // }
 
 
 
@@ -44,3 +41,7 @@ async function initMap() {
     //  });
 }
 
+const marker = new AdvancedMarkerElement({
+        map,
+        position: { lat: 44.4781, lng: -73.1975 }
+});
