@@ -43,6 +43,7 @@ h1 {
     padding: 10px;
     border-radius: 15%;
 }
+
 .otherbtn:hover {
     background-color:limegreen;
     cursor: pointer;
@@ -53,6 +54,10 @@ h1 {
     width: 35%;
     margin-left: 1140px;
     margin-top: 360px;
+}
+
+#map:hover{
+    cursor: pointer;
 }
 
 html,
