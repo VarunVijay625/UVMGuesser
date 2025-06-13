@@ -8,15 +8,18 @@ function initMap() {
     });
 
 
+
+
     map.addListener("click", function(event){
         var x = event.latLng.lat();
         var y = event.latLng.lng()
         //alert(x + " and also " + y);
         //marker.se
+        
         marker = new google.maps.Marker({
-            position: { lat: x, lng: y },
+            position: { lat: x , lng: y },
             map:map,
-            label: "Guess"
+            title: "Guess"
         })
         //(marker.position)
     });
