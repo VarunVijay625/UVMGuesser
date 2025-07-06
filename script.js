@@ -7,22 +7,31 @@ function initMap() {
         mapTypeId: 'satellite'
     });
 
-
-
-
-    map.addListener("click", function(event){
-        var x = event.latLng.lat();
-        var y = event.latLng.lng()
-        //alert(x + " and also " + y);
-        //marker.se
-        
-        marker = new google.maps.Marker({
-            position: { lat: x , lng: y },
+    marker = new google.maps.Marker({
+            position: { lat: 44.478475, lng: -73.195 },
             map:map,
-            title: "Guess"
-        })
-        //(marker.position)
-    });
+            title: "Guess",
+            draggable: true
+    })
+    marker.addListener('dragend', function(){
+        var latlng = {
+            lat: marker.getPosition().lat(),
+            lng: marker.getPosition().lng()
+        }
+        alert(latlng.lat + ", " + latlng.lng)
+    })
+
+
+
+
+    // map.addListener("click", function(event){
+    //     var x = event.latLng.lat();
+    //     var y = event.latLng.lng();
+    //     setMarker(map, "Guess", { lat: x, lng: y })
+    //     alert(x + " " + y);
+        
+    //     //(marker.position)
+    // });
 
 
 
