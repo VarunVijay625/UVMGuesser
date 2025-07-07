@@ -49,11 +49,30 @@ h1 {
     cursor: pointer;
 }
 
+.guessBtn{
+    color:black;
+    display:block;
+    margin-top: 3%;
+    margin-left: 75%;
+    font-size: 250%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:green;
+    transition: 400ms;
+    padding: 10px;
+    border-radius: 15%;
+}
+
+.guessBtn:hover {
+    background-color:limegreen;
+    cursor: pointer;
+}
+
+
 #map{
     height: 55%;
     width: 35%;
-    margin-left: 1140px;
-    margin-top: 360px;
+    margin-left: 60%;
+    margin-top: 5%;
 }
 
 #map:hover{
