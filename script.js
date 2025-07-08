@@ -4,13 +4,14 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 44.4781, lng: -73.1975 },
         zoom: 16,
-        mapTypeId: 'satellite'
-    });
+        mapTypeId: 'satellite',
+        tilt: 0
+    })
 
     marker = new google.maps.Marker({
-            position: { lat: 44.478475, lng: -73.195 },
+            position: { lat: 44.4781, lng: -73.1975 },
             map:map,
-            icon: "./images/marker-Photoroom (2).png",
+            icon: "./images/markers-Photoroom.png",
             title: "Guess",
             draggable: true
     })
@@ -28,12 +29,11 @@ const guessButton = document.getElementById("guessBtn");
 guessButton.addEventListener("click", doGuess)
 
 function doGuess(){
-    alert("hi");
-    // var latlng = {
-    //     lat: marker.getPosition().lat(),
-    //     lng: marker.getPosition().lng()
-    // }
-    // alert(latlng.lat + ", " + latlng.lng)
+    var latlng = {
+        lat: marker.getPosition().lat(),
+        lng: marker.getPosition().lng()
+    }
+    alert(latlng.lat + ", " + latlng.lng)
 }
 
     // map.addListener("click", function(event){
