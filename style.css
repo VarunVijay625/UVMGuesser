@@ -62,7 +62,7 @@ h1 {
     border-radius: 15%;
 }
 
-.guessBtn:hover {
+#guessBtn:hover {
     background-color:limegreen;
     cursor: pointer;
 }
@@ -72,7 +72,7 @@ h1 {
     height: 55%;
     width: 35%;
     margin-left: 60%;
-    margin-top: 5%;
+    margin-top: -25%;
 }
 
 #map:hover{
@@ -85,4 +85,19 @@ body {
     margin: 0;
     padding: 0;
     background-color:mediumseagreen;
+}
+
+#image{
+    width: 40%;
+    height: 30%;
+    margin-top: 3%;
+    margin-left: 10%;
+    border-radius: 5%;
+}
+
+.round{
+    font-size: 300%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: -5%;
+    margin-left: 15%;
 }

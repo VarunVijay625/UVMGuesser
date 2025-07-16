@@ -1,4 +1,39 @@
 let map;
+let images = [
+'images/IMG_8616.jpg',
+'images/IMG_8680.jpg',
+'images/IMG_8681.jpg',
+'images/IMG_8683.jpg',
+'images/IMG_8684.jpg',
+'images/IMG_8685.jpg',
+'images/IMG_0212.jpg',
+'images/IMG_9326.jpg',
+'images/IMG_8832.jpg',
+'images/IMG_2915.jpg',
+'images/IMG_1095.jpg',
+'images/IMG_0961.jpg',
+'images/IMG_3466.jpg',
+'images/IMG_1518.jpg',
+];
+
+const firstImage = 0;
+const lastImage = images.length -1;
+let currentImage = 0;
+
+function shuffle(array) {
+  let currentIndex = array.length;
+
+
+
+  while (currentIndex != 0) {
+
+    let randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+}
 
 function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -15,14 +50,9 @@ function initMap() {
             title: "Guess",
             draggable: true
     })
-    marker.addListener('dragend', function(){
-        // var latlng = {
-        //     lat: marker.getPosition().lat(),
-        //     lng: marker.getPosition().lng()
-        // }
-        // alert(latlng.lat + ", " + latlng.lng)
 
-    })
+    shuffle(images);
+
 
 const guessButton = document.getElementById("guessBtn");
 
@@ -33,38 +63,13 @@ function doGuess(){
         lat: marker.getPosition().lat(),
         lng: marker.getPosition().lng()
     }
-    alert(latlng.lat + ", " + latlng.lng)
-}
-
-    // map.addListener("click", function(event){
-    //     var x = event.latLng.lat();
-    //     var y = event.latLng.lng();
-    //     setMarker(map, "Guess", { lat: x, lng: y })
-    //     alert(x + " " + y);
-        
-    //     //(marker.position)
-    // });
+    const imageTag = document.getElementById('image');
+    currentImage++;
+    imageTag.src = images[currentImage]
+    //document.getElementById("round").innerHTML = latlng.lat + ", " + latlng.lng + ", " + images[currentImage];
+    console.log(latlng.lat + ", " + latlng.lng + ", " + images[currentImage])
 
 
-
-
-    // function setPosition({ x, y }){
-    //     marker.position = { lat: x, lng: y }
-    // }
-
-
-
-    // map.addListener("click", (event) => {
-    //     new AdvancedMarkerElement({
-    //       position: event.latLng,
-    //       map: map,
-    //     });
-    // });
-
-    //  map.addListener('click', function(event) {
-    //      lat = event.latLng.lat();
-    //      lng = event.latLng.lng();
-    //      console.writeLine('Latitude: ' + lat + 'Longitude: ' + lng);
-    //  });
+    }
 }
 
