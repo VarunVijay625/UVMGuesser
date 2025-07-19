@@ -66,7 +66,12 @@ function initMap() {
             draggable: true
     })
 
-    shuffle(images);
+
+
+  //currentImage++;
+
+
+}
 
 
 const guessButton = document.getElementById("guessBtn");
@@ -78,19 +83,11 @@ function doGuess(){
         latit: marker.getPosition().lat(),
         long: marker.getPosition().lng()
     }
-    //console.log(latlng.latit + ", " + latlng.long + ", " + images[currentImage] + ", " + locations_dictionary[images[currentImage]][0])
-    // let lineCoords = [
-    //     {lat: latit, lng: long},
-    //     {lat: locations_dictionary[images[currentImage]][0], lng: locations_dictionary[images[currentImage]][1]}
-    // ]
 
-    const imageTag = document.getElementById('image');
-    currentImage++;
-    imageTag.src = images[currentImage]
     //document.getElementById("round").innerHTML = latlng.lat + ", " + latlng.lng + ", " + images[currentImage];
     var flightPlanCoordinates = [
     { lat: latlng.latit, lng: latlng.long },
-    { lat: locations_dictionary[images[currentImage - 1]][0], lng: locations_dictionary[images[currentImage - 1]][1] }
+    { lat: locations_dictionary[images[currentImage]][0], lng: locations_dictionary[images[currentImage]][1] }
   ];
   const flightPath = new google.maps.Polyline({
     path: flightPlanCoordinates,
@@ -101,8 +98,18 @@ function doGuess(){
   });
 
   flightPath.setMap(map);
+}
+const nextButton = document.getElementById("nextBtn");
+nextButton.addEventListener("click", nextPhoto)
 
+function nextPhoto(){
+  initMap();
+  
+  const imageTag = document.getElementById('image');
+  console.log(imageTag);
+  currentImage++;
+  imageTag.src = images[currentImage];
+  
 
-    }
 }
 
