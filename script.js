@@ -32,7 +32,7 @@ locations_dictionary={
     'images/IMG_3466.jpg':[44.47146254600169, -73.1943671798706],
     'images/IMG_1518.jpg':[44.47918703124267, -73.20018220901488],
 };
-
+let guessed = false;
 const firstImage = 0;
 const lastImage = images.length -1;
 let currentImage = 0;
@@ -76,19 +76,31 @@ function initMap() {
 
 const guessButton = document.getElementById("guessBtn");
 
-guessButton.addEventListener("click", doGuess)
+guessButton.addEventListener("click", doGuess);
 
 function doGuess(){
   if (currentImage === 0){
-    alert('You cannot  guess until the game has started. Press the "Next" button to start!')
+    alert('You cannot guess until the game has started. Press the "Start" button to start!')
   }
+  else if (guessed){
+    alert('You have already guessed. Press the "Next" button to continue!')
+  }
+
   else{
+    guessed = true;
     var latlng = {
         latit: marker.getPosition().lat(),
         long: marker.getPosition().lng()
     }
 
-      //document.getElementById("round").innerHTML = latlng.lat + ", " + latlng.lng + ", " + images[currentImage];
+    var degN = latlng.latit - locations_dictionary[images[currentImage]][0];
+    var degW = latlng.long - locations_dictionary[images[currentImage]][1];
+    var feetN = degN * 69 * 5280;
+    var feetW = degW * 49 * 5280;
+    var sqResult = (feetN * feetN) + (feetW * feetW);
+    var result = Math.sqrt(sqResult);
+
+      
     var flightPlanCoordinates = [
       { lat: latlng.latit, lng: latlng.long },
       { lat: locations_dictionary[images[currentImage]][0], lng: locations_dictionary[images[currentImage]][1] }
@@ -100,8 +112,10 @@ function doGuess(){
       strokeOpacity: 1.0,
       strokeWeight: 2,
     });
+ 
 
     flightPath.setMap(map);
+    document.getElementById("result").innerHTML = 'Your guess was ' + Math.round(result) + ' feet away';
   }
 }
 const nextButton = document.getElementById("nextBtn");
@@ -109,11 +123,14 @@ nextButton.addEventListener("click", nextPhoto)
 
 function nextPhoto(){
   initMap();
+  document.getElementById("btnVal").innerHTML = "Next";
   
   const imageTag = document.getElementById('image');
-  console.log(imageTag);
   currentImage++;
   imageTag.src = images[currentImage];
+  document.getElementById("round").innerHTML = 'Round ' + (currentImage);
+  document.getElementById("result").innerHTML = '';
+  guessed = false;
   
 
 }

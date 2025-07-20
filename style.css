@@ -114,9 +114,16 @@ body {
     border-radius: 5%;
 }
 
-.round{
+#round{
     font-size: 300%;
+    font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: -5%;
+    margin-top: -25%;
+    margin-left: 15%;
+}
+
+#result{
+    font-size: 200%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 15%;
 }
