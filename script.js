@@ -79,25 +79,30 @@ const guessButton = document.getElementById("guessBtn");
 guessButton.addEventListener("click", doGuess)
 
 function doGuess(){
+  if (currentImage === 0){
+    alert('You cannot  guess until the game has started. Press the "Next" button to start!')
+  }
+  else{
     var latlng = {
         latit: marker.getPosition().lat(),
         long: marker.getPosition().lng()
     }
 
-    //document.getElementById("round").innerHTML = latlng.lat + ", " + latlng.lng + ", " + images[currentImage];
+      //document.getElementById("round").innerHTML = latlng.lat + ", " + latlng.lng + ", " + images[currentImage];
     var flightPlanCoordinates = [
-    { lat: latlng.latit, lng: latlng.long },
-    { lat: locations_dictionary[images[currentImage]][0], lng: locations_dictionary[images[currentImage]][1] }
-  ];
-  const flightPath = new google.maps.Polyline({
-    path: flightPlanCoordinates,
-    geodesic: true,
-    strokeColor: "#FF0000",
-    strokeOpacity: 1.0,
-    strokeWeight: 2,
-  });
+      { lat: latlng.latit, lng: latlng.long },
+      { lat: locations_dictionary[images[currentImage]][0], lng: locations_dictionary[images[currentImage]][1] }
+    ];
+    const flightPath = new google.maps.Polyline({
+      path: flightPlanCoordinates,
+      geodesic: true,
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2,
+    });
 
-  flightPath.setMap(map);
+    flightPath.setMap(map);
+  }
 }
 const nextButton = document.getElementById("nextBtn");
 nextButton.addEventListener("click", nextPhoto)
