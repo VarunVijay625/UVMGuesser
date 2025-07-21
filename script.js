@@ -129,19 +129,19 @@ function doGuess(){
     else if (result <= 980 && result > 660){
       points = 4;
     }
-    else if (result <= 660 && result > 330){
+    else if (result <= 660 && result > 500){
       points = 5;
     }
-    else if (result <= 330 && result > 200){
+    else if (result <= 500 && result > 350){
       points = 6;
     }
-    else if (result <= 200 && result > 120){
+    else if (result <= 350 && result > 220){
       points = 7;
     }
-    else if (result <= 120 && result > 80){
+    else if (result <= 220 && result > 100){
       points = 8;
     }
-    else if (result <= 80 && result > 20){
+    else if (result <= 100 && result > 20){
       points = 9;
     }
     else{
