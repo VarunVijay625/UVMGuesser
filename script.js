@@ -32,7 +32,7 @@ locations_dictionary={
     'images/IMG_3466.jpg':[44.47146254600169, -73.1943671798706],
     'images/IMG_1518.jpg':[44.47918703124267, -73.20018220901488],
 };
-let guessed = false;
+let guessed = true;
 const firstImage = 0;
 const lastImage = images.length -1;
 let currentImage = 0;
@@ -74,19 +74,13 @@ function initMap() {
 }
 
 
-const guessButton = document.getElementById("guessBtn");
+const guessButton = document.getElementById("nextBtn");
 
 guessButton.addEventListener("click", doGuess);
 
 function doGuess(){
-  if (currentImage === 0){
-    alert('You cannot guess until the game has started. Press the "Start" button to start!')
-  }
-  else if (guessed){
-    alert('You have already guessed. Press the "Next" button to continue!')
-  }
-
-  else{
+  if (guessed == false){
+    document.getElementById("btnVal").innerHTML = "Next";
     guessed = true;
     var latlng = {
         latit: marker.getPosition().lat(),
@@ -112,26 +106,29 @@ function doGuess(){
       strokeOpacity: 1.0,
       strokeWeight: 2,
     });
- 
+
 
     flightPath.setMap(map);
-    document.getElementById("result").innerHTML = 'Your guess was ' + Math.round(result) + ' feet away';
+    document.getElementById("result").innerHTML = 'Your guess was ' + Math.round(result) + ' feet away (' + (result / 5280).toFixed(2) + ' miles)' ;
+  }
+  else {
+    initMap();
+    document.getElementById("btnVal").innerHTML = "Guess";
+    
+    const imageTag = document.getElementById('image');
+    currentImage++;
+    imageTag.src = images[currentImage];
+    document.getElementById("round").innerHTML = 'Round ' + (currentImage);
+    document.getElementById("result").innerHTML = '';
+    guessed = false;
+  
   }
 }
-const nextButton = document.getElementById("nextBtn");
-nextButton.addEventListener("click", nextPhoto)
+// const nextButton = document.getElementById("nextBtn");
+// nextButton.addEventListener("click", nextPhoto)
 
-function nextPhoto(){
-  initMap();
-  document.getElementById("btnVal").innerHTML = "Next";
-  
-  const imageTag = document.getElementById('image');
-  currentImage++;
-  imageTag.src = images[currentImage];
-  document.getElementById("round").innerHTML = 'Round ' + (currentImage);
-  document.getElementById("result").innerHTML = '';
-  guessed = false;
-  
+// function nextPhoto(){
 
-}
+
+// }
 
