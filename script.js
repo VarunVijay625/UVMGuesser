@@ -36,6 +36,7 @@ let guessed = true;
 const firstImage = 0;
 const lastImage = images.length -1;
 let currentImage = 0;
+var totalPoints = 0;
 
 function shuffle(array) {
   let currentIndex = array.length;
@@ -92,7 +93,7 @@ function doGuess(){
     var feetN = degN * 69 * 5280;
     var feetW = degW * 49 * 5280;
     var sqResult = (feetN * feetN) + (feetW * feetW);
-    var result = Math.sqrt(sqResult);
+    var exactResult = Math.sqrt(sqResult);
 
       
     var flightPlanCoordinates = [
@@ -109,7 +110,48 @@ function doGuess(){
 
 
     flightPath.setMap(map);
-    document.getElementById("result").innerHTML = 'Your guess was ' + Math.round(result) + ' feet away (' + (result / 5280).toFixed(2) + ' miles)' ;
+
+
+    var result = Math.round(exactResult);
+    var points = 0;
+    if (result > 2640){
+      points = 0;
+    }
+    else if (result <= 2640 && result > 1980){
+      points = 1;
+    }
+    else if (result <= 1980 && result > 1320){
+      points = 2;
+    }
+    else if (result <= 1320 && result > 980){
+      points = 3;
+    }
+    else if (result <= 980 && result > 660){
+      points = 4;
+    }
+    else if (result <= 660 && result > 330){
+      points = 5;
+    }
+    else if (result <= 330 && result > 200){
+      points = 6;
+    }
+    else if (result <= 200 && result > 120){
+      points = 7;
+    }
+    else if (result <= 120 && result > 80){
+      points = 8;
+    }
+    else if (result <= 80 && result > 20){
+      points = 9;
+    }
+    else{
+      points = 10;
+    }
+    totalPoints = totalPoints + points;
+
+    //array of exclamations
+    document.getElementById("result").innerHTML = 'Your guess was ' + result + ' feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
+    document.getElementById("points").innerHTML = totalPoints + '/100 points';
   }
   else {
     initMap();
