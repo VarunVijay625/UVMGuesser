@@ -15,7 +15,7 @@ let images = [
 'images/IMG_3466.jpg',
 'images/IMG_1518.jpg',
 ];
-
+//get rid of the crow image
 locations_dictionary={ 
     'images/IMG_8616.jpg':[44.47345500985082, -73.19680262565612],
     'images/IMG_8680.jpg':[44.480008032615, -73.20030022621154],
@@ -148,9 +148,22 @@ function doGuess(){
       points = 10;
     }
     totalPoints = totalPoints + points;
+    
+    let exclamations = [
+      "What were you thinking?",
+      "Not even close!",
+      "Too bad!",
+      "Nice try!(Not really).",
+      "You can do better!",
+      "Not bad!",
+      "You're not far off!",
+      "Good work!",
+      "So close!",
+      "Great job!",
+      "Excellent!"
+    ]
 
-    //array of exclamations
-    document.getElementById("result").innerHTML = 'Your guess was ' + result + ' feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
+    document.getElementById("result").innerHTML = exclamations[points] + ' Your guess was ' + result + ' feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
     document.getElementById("points").innerHTML = totalPoints + '/100 points';
   }
   else {
