@@ -163,10 +163,13 @@ function doGuess(){
       "Excellent!"
     ]
 
-    document.getElementById("result").innerHTML = exclamations[points] + ' Your guess was ' + result + ' feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
+    document.getElementById("result").innerHTML = exclamations[points] + ' Your guess was \n' + result + '\n feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
     document.getElementById("points").innerHTML = totalPoints + '/100 points';
   }
   else {
+    if (currentImage >= 10){
+    alert('ok');
+    }
     initMap();
     document.getElementById("btnVal").innerHTML = "Guess";
     

@@ -126,6 +126,8 @@ body {
     font-size: 200%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-left: 15%;
+    word-wrap: break-word;
+    width: 35%;
 }
 
 #points{
