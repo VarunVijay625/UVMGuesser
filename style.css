@@ -151,7 +151,16 @@ body {
     color:black;
 }
 
-/* DAN WAS HERE */
-#final {
+#over{
     visibility: hidden;
+    margin-top: -50%;
+}
+
+#congrats{
+    visibility: hidden;
+}
+
+#stars{
+    visibility: hidden;
+    margin-left: 30%;
 }

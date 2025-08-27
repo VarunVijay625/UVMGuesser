@@ -27,7 +27,7 @@ locations_dictionary={
     'images/IMG_9326.jpg':[44.47458231996633, -73.19646466732024],
     'images/IMG_8832.jpg':[44.47648089832089, -73.19603014945983],
     'images/IMG_2915.jpg':[44.478303819900596, -73.19456298112868],
-    'images/IMG_1095.jpg':[44.47888888888889, -73.20361111111112],
+    'images/IMG_1095.jpg':[44.47495555555555, -73.19525833333334],
     'images/IMG_0961.jpg':[44.479520026197996, -73.19630373477935],
     'images/IMG_3466.jpg':[44.47144436278037, -73.1942961013317],
     'images/IMG_1518.jpg':[44.47918703124267, -73.20018220901488],
@@ -186,7 +186,16 @@ function doGuess(){
 
       document.getElementById("image").style.visibility = "hidden";
       document.getElementById("map").style.visibility = "hidden";
-      document.getElementById("final").style.visibility = "visible";
+      document.getElementById("nextBtn").style.visibility = "hidden";
+      document.getElementById("round").style.visibility = "hidden";
+      document.getElementById("result").style.visibility = "hidden";
+      document.getElementById("points").style.visibility = "hidden";
+
+      //document.getElementById("over").style.visibility = "visible"
+      //document.getElementById("final").style.visibility = "visible";
+      document.getElementById("over").style.visibility = "visible";
+      document.getElementById("congrats").style.visibility = "visible";
+      document.getElementById("stars").style.visibility = "visible";
 
       const congrs = [
         "You've got some room for improvement!",
@@ -206,9 +215,9 @@ function doGuess(){
       console.log('hi');
       console.log(document.getElementById("congrats"));
       
-      document.getElementById("congrats").innerHTML = 'You scored a total of ' + totalPoints + 'points. ' + congrs[finalPts];
+      document.getElementById("congrats").innerHTML = 'You scored a total of ' + totalPoints + ' points. ' + congrs[finalPts];
 
-      document.getElementById("stars").innerHTML = '<img src="images/0.png" alt="UVM"></img>';
+      document.getElementById("stars").innerHTML = '<img src="images/'+finalPts+'.png" alt="UVM"></img>';
 
 
     }
