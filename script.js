@@ -289,26 +289,48 @@ var totalPoints = 0;
    }
  }
 
-function initMap() {
+function initMap(lat, lng, zoom) {
     map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 44.4781, lng: -73.1975 },
-        zoom: 16,
+        center: { lat: lat, lng: lng},
+        zoom: zoom,
         mapTypeId: 'satellite',
         tilt: 0
     })
 
-    marker = new google.maps.Marker({
-      position: { lat: 44.4781, lng: -73.1975 },
-      map:map,
-      icon: "./images/markers-Photoroom.png",
-      title: "Guess",
-      draggable: true
-    })
+    // marker = new google.maps.Marker({
+    //   position: { lat: 44.4781, lng: -73.1975 },
+    //   map:map,
+    //   icon: "./images/markers-Photoroom.png",
+    //   title: "Guess",
+    //   draggable: true
+    // })
 
   //currentImage++;
 
+  map.addListener('click', function(event){
+  
+  const markLT = event.latLng.lat();
+  const markLN = event.latLng.lng();
+  const L = map.center.lng()
+  const LN = map.center.lat()
+  const z = map.zoom
+
+  initMap(LN, L, z)
+
+
+  marker = new google.maps.Marker({
+  position: { lat: markLT, lng: markLN },
+  map:map,
+  icon: "./images/markers-Photoroom.png",
+  title: "Guess",
+  draggable: true})
+}
+
+)
+
 
 }
+
 
 
 const guessButton = document.getElementById("nextBtn");
@@ -454,7 +476,7 @@ function doGuess(){
 
 
     }
-    initMap();
+    initMap(44.4781, -73.1975, 16);
     document.getElementById("btnVal").innerHTML = "Guess";
     
     const imageTag = document.getElementById('image');
@@ -473,4 +495,3 @@ function doGuess(){
 
 
 // }
-
