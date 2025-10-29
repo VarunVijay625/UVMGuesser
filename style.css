@@ -164,3 +164,17 @@ body {
     visibility: hidden;
     margin-left: 30%;
 }
+
+#againBtn{
+    visibility: hidden;
+    color:black;
+    display:block;
+    margin-top: 3%;
+    margin-left: 40%;
+    font-size: 250%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:green;
+    transition: 400ms;
+    padding: 10px;
+    border-radius: 15%;
+}

@@ -146,7 +146,6 @@ let images = [
   'images/Image (144).jpg',
   'images/Image (145).jpg',
   'images/Image (146).jpg',
-  'images/Image (147).jpg',
   'images/Image (148).jpg',
   'images/Image (149).jpg',
   'images/Image (150).jpg',
@@ -161,11 +160,9 @@ let images = [
   'images/Image (159).jpg',
   'images/Image (160).jpg',
   'images/Image (161).jpg',
-  'images/Image (162).jpg',
   'images/Image (163).jpg',
   'images/Image (164).jpg',
   'images/Image (165).jpg',
-  'images/Image (166).jpg',
   'images/Image (167).jpg',
   'images/Image (168).jpg',
   'images/Image (169).jpg',
@@ -173,6 +170,7 @@ let images = [
 ];
 //get rid of the crow image
 locations_dictionary={ 
+  'images/Image (1).jpg':[ 44.46853722387952 ,-73.19849452034418],
   'images/Image (2).jpg':[ 44.47458614780836 ,-73.19647673726085],
   'images/Image (3).jpg':[ 44.46881730638733 ,-73.19525230884551],
   'images/Image (4).jpg':[ 44.46855315865572 ,-73.1956814622879],
@@ -180,7 +178,7 @@ locations_dictionary={
   'images/Image (6).jpg':[ 44.46825359836866 ,-73.196915948987],
   'images/Image (7).jpg':[ 44.47871241445852 ,-73.19994617462157],
   'images/Image (8).jpg':[ 44.47109122437439 ,-73.19394339084624],
-  'images/Image (9).jpg':[ 44.4783220009839 ,-73.1961320734024],
+  'images/Image (9).jpg':[ 44.47831831989777 ,-73.1961621564935],
   'images/Image (10).jpg':[ 44.477701927155096 ,-73.19562245368957],
   'images/Image (11).jpg':[ 44.47230183901508 ,-73.1942585504055],
   'images/Image (12).jpg':[ 44.47828372501252 ,-73.19628227710723],
@@ -299,7 +297,7 @@ locations_dictionary={
   'images/Image (125).jpg':[44.47136205971179 ,-73.19770653009414],
   'images/Image (126).jpg':[44.476323961721434 ,-73.19644320964812],
   'images/Image (127).jpg':[44.47721581528643 ,-73.19650758266448],
-  'images/Image (128).jpg':[44.477707668609746 ,-73.19385219573974],
+  'images/Image (128).jpg':[ 44.47784644104532 ,-73.19400138509371],
   'images/Image (129).jpg':[ 44.47004631553897 ,-73.19743708791991],
   'images/Image (130).jpg':[ 44.47950854364511 ,-73.1991039609909],
   'images/Image (131).jpg':[ 44.47920999647306 ,-73.19916833400725],
@@ -318,6 +316,7 @@ locations_dictionary={
   'images/Image (144).jpg':[ 44.47162476803082 ,-73.19491380665062],
   'images/Image (145).jpg':[ 44.47173239483412 ,-73.19770512506571],
   'images/Image (146).jpg':[ 44.478637846662835 ,-73.1966136642735],
+  //missing 147
   'images/Image (148).jpg':[ 44.47039036520223 ,-73.1981099412398],
   'images/Image (149).jpg':[ 44.475225629423484 ,-73.19596624228835],
   'images/Image (150).jpg':[ 44.472305330376365 ,-73.19387305255066],
@@ -332,9 +331,11 @@ locations_dictionary={
   'images/Image (159).jpg':[ 44.46800709702126 ,-73.19640389086251],
   'images/Image (160).jpg':[ 44.47172521995244 ,-73.19346352349905],
   'images/Image (161).jpg':[ 44.47022646212036 ,-73.19793850947555],
+  //missing 162
   'images/Image (163).jpg':[ 44.474201010950146 ,-73.19466983933937],
   'images/Image (164).jpg':[ 44.47600023148079 ,-73.19645772988302],
   'images/Image (165).jpg':[ 44.47659333494322 ,-73.19438473609272],
+  //missing 166
   'images/Image (167).jpg':[ 44.477062092490726 ,-73.19642948384913],
   'images/Image (168).jpg':[ 44.48068798644297 ,-73.20093230886482],
   'images/Image (169).jpg':[ 44.47292726441361 ,-73.19546663217092],
@@ -412,9 +413,9 @@ guessButton.addEventListener("click", doGuess);
 function doGuess(){
   // console.log(document.getElementById("result"));
   if (guessed == false){
-    // if(cood == false){
-    //   alert("guess first")
-    // }
+    if(cood == false){
+      alert("guess first")
+    }
     document.getElementById("btnVal").innerHTML = "Next";
     guessed = true;
     var latlng = {
@@ -526,6 +527,7 @@ function doGuess(){
       document.getElementById("over").style.visibility = "visible";
       document.getElementById("congrats").style.visibility = "visible";
       document.getElementById("stars").style.visibility = "visible";
+      document.getElementById("againBtn").style.visibility = "visible";
 
       const congrs = [
         "You've got some room for improvement!",
@@ -562,6 +564,28 @@ function doGuess(){
     guessed = false;
   
   }
+}
+
+function playAgain(){
+  shuffle(images);
+  guessed = false;
+  currentImage = 0;
+  totalPoints = 0;
+  doGuess();
+  doGuess();
+  document.getElementById("image").style.visibility = "visible";
+  document.getElementById("map").style.visibility = "visible";
+  document.getElementById("nextBtn").style.visibility = "visible";
+  document.getElementById("round").style.visibility = "visible";
+  document.getElementById("result").style.visibility = "visible";
+  document.getElementById("points").style.visibility = "visible";
+
+  //document.getElementById("over").style.visibility = "visible"
+  //document.getElementById("final").style.visibility = "visible";
+  document.getElementById("over").style.visibility = "hidden";
+  document.getElementById("congrats").style.visibility = "hidden";
+  document.getElementById("stars").style.visibility = "hidden";
+  document.getElementById("againBtn").style.visibility = "hidden";
 }
 // const nextButton = document.getElementById("nextBtn");
 // nextButton.addEventListener("click", nextPhoto)
