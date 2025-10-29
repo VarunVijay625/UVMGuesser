@@ -1,4 +1,5 @@
 let map;
+
 let images = [
   'images/Image (1).jpg',
   'images/Image (2).jpg',
@@ -132,6 +133,43 @@ let images = [
   'images/Image (131).jpg',
   'images/Image (132).jpg',
   'images/Image (133).jpg',
+  'images/Image (134).jpg',
+  'images/Image (135).jpg',
+  'images/Image (136).jpg',
+  'images/Image (137).jpg',
+  'images/Image (138).jpg',
+  'images/Image (139).jpg',
+  'images/Image (140).jpg',
+  'images/Image (141).jpg',
+  'images/Image (142).jpg',
+  'images/Image (143).jpg',
+  'images/Image (144).jpg',
+  'images/Image (145).jpg',
+  'images/Image (146).jpg',
+  'images/Image (147).jpg',
+  'images/Image (148).jpg',
+  'images/Image (149).jpg',
+  'images/Image (150).jpg',
+  'images/Image (151).jpg',
+  'images/Image (152).jpg',
+  'images/Image (153).jpg',
+  'images/Image (154).jpg',
+  'images/Image (155).jpg',
+  'images/Image (156).jpg',
+  'images/Image (157).jpg',
+  'images/Image (158).jpg',
+  'images/Image (159).jpg',
+  'images/Image (160).jpg',
+  'images/Image (161).jpg',
+  'images/Image (162).jpg',
+  'images/Image (163).jpg',
+  'images/Image (164).jpg',
+  'images/Image (165).jpg',
+  'images/Image (166).jpg',
+  'images/Image (167).jpg',
+  'images/Image (168).jpg',
+  'images/Image (169).jpg',
+  'images/Image (170).jpg'
 ];
 //get rid of the crow image
 locations_dictionary={ 
@@ -175,9 +213,9 @@ locations_dictionary={
   'images/Image (39).jpg':[ 44.478301906102025 ,-73.19457236886024],
   'images/Image (40).jpg':[ 44.474670360247714 ,-73.19498945236205],
   'images/Image (41).jpg':[ 44.47834113896028 ,-73.19493580818175],
-  'images/Image (42).jpg':[ 44.47917841927907 ,-73.19961760401725],
+  'images/Image (42).jpg':[ 44.47925313921395 ,-73.19967311276912],
   'images/Image (43).jpg':[ 44.47538233329316 ,-73.19524694442748],
-  'images/Image (44).jpg':[ 44.469881541658815 ,-73.19924343585967],
+  'images/Image (44).jpg':[ 44.469656931541465 ,-73.19911626897067],
   'images/Image (45).jpg':[ 44.46927190566244 ,-73.19767300248145],
   'images/Image (46).jpg':[ 44.47043662070125 ,-73.19733370304107],
   'images/Image (47).jpg':[ 44.478325828579685 ,-73.19612670898437],
@@ -262,14 +300,47 @@ locations_dictionary={
   'images/Image (126).jpg':[44.476323961721434 ,-73.19644320964812],
   'images/Image (127).jpg':[44.47721581528643 ,-73.19650758266448],
   'images/Image (128).jpg':[44.477707668609746 ,-73.19385219573974],
-  'images/Image (129).jpg':[44.47010165984177 ,-73.19736723065375],
+  'images/Image (129).jpg':[ 44.47004631553897 ,-73.19743708791991],
   'images/Image (130).jpg':[ 44.47950854364511 ,-73.1991039609909],
   'images/Image (131).jpg':[ 44.47920999647306 ,-73.19916833400725],
   'images/Image (132).jpg':[ 44.4759966901492 ,-73.19671411275863],
-  'images/Image (133)2222222222.jpg':[ 44.47641582709625 ,-73.19802034854888]
-
+  'images/Image (133).jpg':[ 44.47641582709625 ,-73.19802034854888],
+  'images/Image (134).jpg':[ 44.47561739914774 ,-73.19372011961674],
+  'images/Image (135).jpg':[ 44.47101011708055 ,-73.1957258863747],
+  'images/Image (136).jpg':[ 44.472969027103666 ,-73.19549406852735],
+  'images/Image (137).jpg':[ 44.47326932326606 ,-73.19587062556364],
+  'images/Image (138).jpg':[ 44.472815694099566 ,-73.19497290044657],
+  'images/Image (139).jpg':[ 44.47828200413799 ,-73.20093774685517],
+  'images/Image (140).jpg':[ 44.47985267254186 ,-73.19908656414415],
+  'images/Image (141).jpg':[ 44.47134666958627 ,-73.196712990576],
+  'images/Image (142).jpg':[ 44.46712744414855 ,-73.1948029750618],
+  'images/Image (143).jpg':[ 44.46697549218234 ,-73.19447986431487],
+  'images/Image (144).jpg':[ 44.47162476803082 ,-73.19491380665062],
+  'images/Image (145).jpg':[ 44.47173239483412 ,-73.19770512506571],
+  'images/Image (146).jpg':[ 44.478637846662835 ,-73.1966136642735],
+  'images/Image (148).jpg':[ 44.47039036520223 ,-73.1981099412398],
+  'images/Image (149).jpg':[ 44.475225629423484 ,-73.19596624228835],
+  'images/Image (150).jpg':[ 44.472305330376365 ,-73.19387305255066],
+  'images/Image (151).jpg':[ 44.471418568149474 ,-73.19672456319327],
+  'images/Image (152).jpg':[ 44.476307368481876 ,-73.19527501588118],
+  'images/Image (153).jpg':[ 44.48503046879867 ,-73.19295787023772],
+  'images/Image (154).jpg':[ 44.472964114598156 ,-73.19550541976575],
+  'images/Image (155).jpg':[ 44.47142854494635 ,-73.19489762398041],
+  'images/Image (156).jpg':[ 44.476595659417484 ,-73.19579548767514],
+  'images/Image (157).jpg':[ 44.47261358814653 ,-73.19566526925948],
+  'images/Image (158).jpg':[ 44.46800709702126 ,-73.19640389086251],
+  'images/Image (159).jpg':[ 44.46800709702126 ,-73.19640389086251],
+  'images/Image (160).jpg':[ 44.47172521995244 ,-73.19346352349905],
+  'images/Image (161).jpg':[ 44.47022646212036 ,-73.19793850947555],
+  'images/Image (163).jpg':[ 44.474201010950146 ,-73.19466983933937],
+  'images/Image (164).jpg':[ 44.47600023148079 ,-73.19645772988302],
+  'images/Image (165).jpg':[ 44.47659333494322 ,-73.19438473609272],
+  'images/Image (167).jpg':[ 44.477062092490726 ,-73.19642948384913],
+  'images/Image (168).jpg':[ 44.48068798644297 ,-73.20093230886482],
+  'images/Image (169).jpg':[ 44.47292726441361 ,-73.19546663217092],
+  'images/Image (170).jpg':[ 44.48132392213592 ,-73.20284739900502]
 };
-
+let cood = false;
 let guessed = true;
 const firstImage = 0;
 const lastImage = images.length -1;
@@ -308,6 +379,7 @@ function initMap(lat, lng, zoom) {
   //currentImage++;
 
   map.addListener('click', function(event){
+    cood = true;
   
   const markLT = event.latLng.lat();
   const markLN = event.latLng.lng();
@@ -340,6 +412,9 @@ guessButton.addEventListener("click", doGuess);
 function doGuess(){
   // console.log(document.getElementById("result"));
   if (guessed == false){
+    // if(cood == false){
+    //   alert("guess first")
+    // }
     document.getElementById("btnVal").innerHTML = "Next";
     guessed = true;
     var latlng = {
@@ -424,12 +499,12 @@ function doGuess(){
       "Excellent!"
     ]
 
-
-
-
-
     document.getElementById("result").innerHTML = exclamations[points] + ' Your guess was \n' + result + '\n feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
     document.getElementById("points").innerHTML = totalPoints + '/100 points';
+
+    cood = false
+
+
   }
   else {
     if (currentImage >= 10){
