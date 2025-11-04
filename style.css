@@ -3,9 +3,10 @@
     padding: 0;
 }
 .background-image {
-    background-image: url("./images/hi.png");
+    background-image: url("./images/hi.jpg");
     background-size: cover;
     width: 100vw;
+    height: 100vh;
 }
 h1 {
     color:darkslateblue;
@@ -170,7 +171,7 @@ body {
     color:black;
     display:block;
     margin-top: 3%;
-    margin-left: 40%;
+    margin-left: 45%;
     font-size: 250%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:green;

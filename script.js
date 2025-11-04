@@ -341,12 +341,14 @@ locations_dictionary={
   'images/Image (169).jpg':[ 44.47292726441361 ,-73.19546663217092],
   'images/Image (170).jpg':[ 44.48132392213592 ,-73.20284739900502]
 };
+
 let cood = false;
 let guessed = true;
 const firstImage = 0;
 const lastImage = images.length -1;
 let currentImage = 0;
 var totalPoints = 0;
+var roundNum = 0;
 
  function shuffle(array) {
    let currentIndex = array.length;
@@ -411,11 +413,13 @@ const guessButton = document.getElementById("nextBtn");
 guessButton.addEventListener("click", doGuess);
 
 function doGuess(){
+  
   // console.log(document.getElementById("result"));
+  
   if (guessed == false){
-    if(cood == false){
-      alert("guess first")
-    }
+    // if(cood == false){
+    //   alert("guess first")
+    // }
     document.getElementById("btnVal").innerHTML = "Next";
     guessed = true;
     var latlng = {
@@ -501,14 +505,22 @@ function doGuess(){
     ]
 
     document.getElementById("result").innerHTML = exclamations[points] + ' Your guess was \n' + result + '\n feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
-    document.getElementById("points").innerHTML = totalPoints + '/100 points';
+    
+    if(roundNum == 1){
+      document.getElementById("points").innerHTML = '';
+    }
+    else{
+      document.getElementById("points").innerHTML = totalPoints + '/100 points';
+    }
+
+
 
     cood = false
 
 
   }
   else {
-    if (currentImage >= 10){
+    if (roundNum >= 10){
 
       //reset the button map page
 
@@ -528,6 +540,8 @@ function doGuess(){
       document.getElementById("congrats").style.visibility = "visible";
       document.getElementById("stars").style.visibility = "visible";
       document.getElementById("againBtn").style.visibility = "visible";
+
+      roundNum = 0;
 
       const congrs = [
         "You've got some room for improvement!",
@@ -558,21 +572,28 @@ function doGuess(){
     
     const imageTag = document.getElementById('image');
     currentImage++;
+    roundNum++;
     imageTag.src = images[currentImage];
-    document.getElementById("round").innerHTML = 'Round ' + (currentImage) +"/10";
+    document.getElementById("round").innerHTML = 'Round ' + (roundNum) +"/10";
     document.getElementById("result").innerHTML = '';
     guessed = false;
+    if(roundNum == 1){
+      document.getElementById("points").innerHTML = '';
+    }
   
   }
 }
 
 function playAgain(){
-  shuffle(images);
+  if(currentImage >= images.length - 10){
+    shuffle(images);
+    currentImage = 0;
+  }
   guessed = false;
-  currentImage = 0;
+  //totalPoints = 0;
+  console.log(currentImage);
+  points = 0;
   totalPoints = 0;
-  doGuess();
-  doGuess();
   document.getElementById("image").style.visibility = "visible";
   document.getElementById("map").style.visibility = "visible";
   document.getElementById("nextBtn").style.visibility = "visible";
