@@ -349,6 +349,7 @@ const lastImage = images.length -1;
 let currentImage = 0;
 var totalPoints = 0;
 var roundNum = 0;
+var longitude = 0;
 
  function shuffle(array) {
    let currentIndex = array.length;
@@ -416,15 +417,26 @@ function doGuess(){
   
   // console.log(document.getElementById("result"));
   
-  if (guessed == false){
+  if(guessed == false){
     // if(cood == false){
     //   alert("guess first")
     // }
+    // while(guessed == false){
+    //   if(longitude == 0){
+    //     alert('Please guess first');
+
+    //   }
+    // }
     document.getElementById("btnVal").innerHTML = "Next";
     guessed = true;
+    if(typeof marker !== 'undefined'){
+      var latitude =  marker.getPosition().lat();
+      longitude = marker.getPosition().lng();
+    }
+
     var latlng = {
-        latit: marker.getPosition().lat(),
-        long: marker.getPosition().lng()
+        latit: latitude,
+        long: longitude
     }
     console.log("'"+images[currentImage]+"':[", latlng.latit, "," + latlng.long+"],")
 
@@ -503,9 +515,10 @@ function doGuess(){
       "Great job!",
       "Excellent!"
     ]
+    
 
     document.getElementById("result").innerHTML = exclamations[points] + ' Your guess was \n' + result + '\n feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
-    
+
     if(roundNum == 1){
       document.getElementById("points").innerHTML = '';
     }
@@ -571,18 +584,22 @@ function doGuess(){
     document.getElementById("btnVal").innerHTML = "Guess";
     
     const imageTag = document.getElementById('image');
-    currentImage++;
+
     roundNum++;
+    currentImage++;
     imageTag.src = images[currentImage];
     document.getElementById("round").innerHTML = 'Round ' + (roundNum) +"/10";
     document.getElementById("result").innerHTML = '';
     guessed = false;
+    longitude = 0;
+
     if(roundNum == 1){
       document.getElementById("points").innerHTML = '';
     }
-  
   }
 }
+
+
 
 function playAgain(){
   if(currentImage >= images.length - 10){

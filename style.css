@@ -5,8 +5,9 @@
 .background-image {
     background-image: url("./images/hi.jpg");
     background-size: cover;
+    margin-top: -2%;
     width: 100vw;
-    height: 100vh;
+    height: 104%;
 }
 h1 {
     color:darkslateblue;
@@ -19,24 +20,37 @@ h1 {
 .mainbtn {
     color:black;
     display:flex;
-    margin-left: 500px;
+    margin-left: 12%;
     font-size: 450%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:green;
     transition: 400ms;
     padding: 10px;
     border-radius: 15%;
-    margin-top: 540px
+    margin-top: 40%;
 }
 .mainbtn:hover {
-    background-color:rgb(36, 153, 36);
+    background-color:limegreen;
     cursor: pointer;
 }
 .otherbtn{
     color:black;
     display:block;
     margin-top: -107px;
-    margin-left: 1000px;
+    margin-left: 45%;
+    font-size: 450%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:green;
+    transition: 400ms;
+    padding: 10px;
+    border-radius: 15%;
+}
+
+.lastbtn{
+    color:black;
+    display:block;
+    margin-top: -107px;
+    margin-left: 75%;
     font-size: 450%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color:green;
@@ -46,6 +60,29 @@ h1 {
 }
 
 .otherbtn:hover {
+    background-color:limegreen;
+    cursor: pointer;
+}
+
+.lastbtn:hover {
+    background-color:limegreen;
+    cursor: pointer;
+}
+
+#backBtn{
+    color:black;
+    display:block;
+    margin-top: 2%;
+    margin-left: 1%;
+    font-size: 250%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:green;
+    transition: 400ms;
+    padding: 10px;
+    border-radius: 15%;
+}
+
+#backBtn:hover {
     background-color:limegreen;
     cursor: pointer;
 }
@@ -104,7 +141,12 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color:mediumseagreen;
+    background-color:rgb(60, 179, 113);
+}
+
+
+#index {
+    background-color:rgb(22, 117, 49);
 }
 
 #image{
@@ -119,14 +161,14 @@ body {
     font-size: 300%;
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-top: -7%;
-    margin-left: 15%;
+    margin-top: -13%;
+    margin-left: 11%;
 }
 
 #result{
     font-size: 200%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: 15%;
+    margin-left: 11%;
     word-wrap: break-word;
     width: 35%;
 }
@@ -134,8 +176,13 @@ body {
 #points{
     font-size: 150%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-left: 15%;
+    margin-left: 11%;
     margin-bottom: 15%;
+}
+
+#error{
+    font-size: 150%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #over{
