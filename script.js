@@ -174,6 +174,7 @@ locations_dictionary={
   'images/Image (2).jpg':[ 44.47458614780836 ,-73.19647673726085],
   'images/Image (3).jpg':[ 44.46881730638733 ,-73.19525230884551],
   'images/Image (4).jpg':[ 44.46855315865572 ,-73.1956814622879],
+  //fix this one too
   'images/Image (5).jpg':[ 44.47557755019155 ,-73.1959523653984],
   'images/Image (6).jpg':[ 44.46825359836866 ,-73.196915948987],
   'images/Image (7).jpg':[ 44.47871241445852 ,-73.19994617462157],
@@ -226,6 +227,7 @@ locations_dictionary={
   'images/Image (54).jpg':[ 44.48063765054527 ,-73.20042897224425],
   'images/Image (55).jpg':[ 44.470601229333454 ,-73.19832612037658],
   'images/Image (56).jpg':[ 44.468576128070865 ,-73.19877673149112],
+  //fix 56
   'images/Image (57).jpg':[ 44.47889230998424 ,-73.19954384326934],
   'images/Image (58).jpg':[ 44.48122420338745 ,-73.2029596364498],
   'images/Image (59).jpg':[ 44.46709649643232 ,-73.19868821859359],
@@ -250,6 +252,7 @@ locations_dictionary={
   'images/Image (78).jpg':[ 44.477539252374314 ,-73.19596041202544],
   'images/Image (79).jpg':[ 44.47231236598908 ,-73.19312263488769],
   'images/Image (80).jpg':[ 44.47845596668624 ,-73.19632519245147],
+  //fix 80
   'images/Image (81).jpg':[ 44.46844118262569 ,-73.19807868659495],
   'images/Image (82).jpg':[ 44.470103573909476 ,-73.19906641006472],
   'images/Image (83).jpg':[ 44.473564105324705 ,-73.1966899728775],
@@ -283,6 +286,7 @@ locations_dictionary={
   'images/Image (111).jpg':[44.470294980343944 ,-73.19679726123809],
   'images/Image (112).jpg':[44.4784368287476 ,-73.19857288360595],
   'images/Image (113).jpg':[44.4796807817031 ,-73.19990862369536],
+  //fix 113
   'images/Image (114).jpg':[44.48086107716006 ,-73.2016715055704],
   'images/Image (115).jpg':[44.46882113460664 ,-73.1952684020996],
   'images/Image (116).jpg':[44.478117224244485 ,-73.19594700098037],
@@ -303,10 +307,12 @@ locations_dictionary={
   'images/Image (131).jpg':[ 44.47920999647306 ,-73.19916833400725],
   'images/Image (132).jpg':[ 44.4759966901492 ,-73.19671411275863],
   'images/Image (133).jpg':[ 44.47641582709625 ,-73.19802034854888],
-  'images/Image (134).jpg':[ 44.47561739914774 ,-73.19372011961674],
+  'images/Image (134).jpg':[ 44.47504358455534 ,-73.19442332269087],
+  //look over 134
   'images/Image (135).jpg':[ 44.47101011708055 ,-73.1957258863747],
   'images/Image (136).jpg':[ 44.472969027103666 ,-73.19549406852735],
   'images/Image (137).jpg':[ 44.47326932326606 ,-73.19587062556364],
+  //look iver 137
   'images/Image (138).jpg':[ 44.472815694099566 ,-73.19497290044657],
   'images/Image (139).jpg':[ 44.47828200413799 ,-73.20093774685517],
   'images/Image (140).jpg':[ 44.47985267254186 ,-73.19908656414415],
@@ -356,7 +362,7 @@ var longitude = 0;
 
    while (currentIndex != 0) {
 
-     let randomIndex = Math.floor(Math.random() * currentIndex);
+     let randomIndex = Math.floor(Math.random() * array.length);
      currentIndex--;
 
      [array[currentIndex], array[randomIndex]] = [
@@ -392,6 +398,7 @@ function initMap(lat, lng, zoom) {
   const z = map.zoom
 
   initMap(LN, L, z)
+  nextBtn.disabled = false;
 
 
   marker = new google.maps.Marker({
@@ -414,10 +421,10 @@ const guessButton = document.getElementById("nextBtn");
 guessButton.addEventListener("click", doGuess);
 
 function doGuess(){
-  
   // console.log(document.getElementById("result"));
   
   if(guessed == false){
+      
     // if(cood == false){
     //   alert("guess first")
     // }
@@ -582,7 +589,7 @@ function doGuess(){
     }
     initMap(44.4781, -73.1975, 16);
     document.getElementById("btnVal").innerHTML = "Guess";
-    
+    nextBtn.disabled = true;
     const imageTag = document.getElementById('image');
 
     roundNum++;
@@ -607,6 +614,7 @@ function playAgain(){
     currentImage = 0;
   }
   guessed = false;
+  
   //totalPoints = 0;
   console.log(currentImage);
   points = 0;

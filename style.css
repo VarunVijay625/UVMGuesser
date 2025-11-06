@@ -124,6 +124,10 @@ h1 {
     cursor: pointer;
 }
 
+#nextBtn:disabled {
+    background-color:rgb(90, 138, 90);
+    cursor: pointer;
+}
 
 #map{
     height: 55%;
@@ -225,4 +229,9 @@ body {
     transition: 400ms;
     padding: 10px;
     border-radius: 15%;
+}
+
+#about{
+    margin-left: 4%;
+    margin-top: auto;
 }
