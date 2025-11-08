@@ -173,19 +173,18 @@ locations_dictionary={
   'images/Image (1).jpg':[ 44.46853722387952 ,-73.19849452034418],
   'images/Image (2).jpg':[ 44.47458614780836 ,-73.19647673726085],
   'images/Image (3).jpg':[ 44.46881730638733 ,-73.19525230884551],
-  'images/Image (4).jpg':[ 44.46855315865572 ,-73.1956814622879],
-  //fix this one too
+  'images/Image (4).jpg':[ 44.468630242892004 ,-73.19575025468825],
   'images/Image (5).jpg':[ 44.47557755019155 ,-73.1959523653984],
   'images/Image (6).jpg':[ 44.46825359836866 ,-73.196915948987],
   'images/Image (7).jpg':[ 44.47871241445852 ,-73.19994617462157],
   'images/Image (8).jpg':[ 44.47109122437439 ,-73.19394339084624],
   'images/Image (9).jpg':[ 44.47831831989777 ,-73.1961621564935],
   'images/Image (10).jpg':[ 44.477701927155096 ,-73.19562245368957],
-  'images/Image (11).jpg':[ 44.47230183901508 ,-73.1942585504055],
+  'images/Image (11).jpg':[ 44.472312362075705 ,-73.19430578182937],
   'images/Image (12).jpg':[ 44.47828372501252 ,-73.19628227710723],
   'images/Image (13).jpg':[ 44.478301906102025 ,-73.19612939119338],
   'images/Image (14).jpg':[ 44.47833922516288 ,-73.19606904149055],
-  'images/Image (15).jpg':[ 44.47233437692771 ,-73.1936832165718],
+  'images/Image (15).jpg':[ 44.47231064540916 ,-73.19366645775894],
   'images/Image (16).jpg':[ 44.471431921626575 ,-73.19491166830062],
   'images/Image (17).jpg':[ 44.47129028368448 ,-73.19488752841949],
   'images/Image (18).jpg':[ 44.47794689538105 ,-73.19584775924682],
@@ -201,12 +200,12 @@ locations_dictionary={
   'images/Image (28).jpg':[ 44.4775306401674 ,-73.19675166368484],
   'images/Image (29).jpg':[ 44.47960805902952 ,-73.19628227710723],
   'images/Image (30).jpg':[ 44.478026318452386 ,-73.19612268567084],
-  'images/Image (31).jpg':[ 44.47492491074798 ,-73.19518257141112],
+  'images/Image (31).jpg':[ 44.4749480434102 ,-73.19512054839606],
   'images/Image (32).jpg':[ 44.47951954775837 ,-73.19787617981433],
   'images/Image (33).jpg':[ 44.48323594872058 ,-73.19152336776256],
   'images/Image (34).jpg':[ 44.47903010192677 ,-73.20024121761321],
   'images/Image (35).jpg':[ 44.48313439230168 ,-73.190747538805],
-  'images/Image (36).jpg':[ 44.46964993815322 ,-73.19840658664702],
+  'images/Image (36).jpg':[ 44.469512982371214 ,-73.19882403999266],
   'images/Image (37).jpg':[ 44.471619495669245 ,-73.19458712100982],
   'images/Image (38).jpg':[ 44.47898225753914 ,-73.19955993652343],
   'images/Image (39).jpg':[ 44.478301906102025 ,-73.19457236886024],
@@ -227,7 +226,6 @@ locations_dictionary={
   'images/Image (54).jpg':[ 44.48063765054527 ,-73.20042897224425],
   'images/Image (55).jpg':[ 44.470601229333454 ,-73.19832612037658],
   'images/Image (56).jpg':[ 44.46704559250869 ,-73.19972587812934],
-  //fix 56
   'images/Image (57).jpg':[ 44.47889230998424 ,-73.19954384326934],
   'images/Image (58).jpg':[ 44.48122420338745 ,-73.2029596364498],
   'images/Image (59).jpg':[ 44.46709649643232 ,-73.19868821859359],
@@ -249,12 +247,12 @@ locations_dictionary={
   'images/Image (75).jpg':[ 44.47878226757426 ,-73.20077229499816],
   'images/Image (76).jpg':[ 44.477967947289976 ,-73.1968348121643],
   'images/Image (77).jpg':[ 44.46842299846446 ,-73.19831539154052],
-  'images/Image (78).jpg':[ 44.477539252374314 ,-73.19596041202544],
+  'images/Image (78).jpg':[ 44.47757344591314 ,-73.19606630299758],
   'images/Image (79).jpg':[ 44.47231236598908 ,-73.19312263488769],
-  'images/Image (80).jpg':[ 44.47845596668624 ,-73.19632519245147],
-  //fix 80
+  'images/Image (80).jpg':[ 44.47857625519758 ,-73.1962156164238],
   'images/Image (81).jpg':[ 44.46844118262569 ,-73.19807868659495],
   'images/Image (82).jpg':[ 44.470103573909476 ,-73.19906641006472],
+  //possibly 82 - not a priority for release
   'images/Image (83).jpg':[ 44.473564105324705 ,-73.1966899728775],
   'images/Image (84).jpg':[ 44.47483399998266 ,-73.19632519245147],
   'images/Image (85).jpg':[ 44.478606199286546 ,-73.19655049800872],
@@ -285,8 +283,7 @@ locations_dictionary={
   'images/Image (110).jpg':[44.46976191186391 ,-73.19760594725608],
   'images/Image (111).jpg':[44.470294980343944 ,-73.19679726123809],
   'images/Image (112).jpg':[44.4784368287476 ,-73.19857288360595],
-  'images/Image (113).jpg':[44.4796807817031 ,-73.19990862369536],
-  //fix 113
+  'images/Image (113).jpg':[ 44.47966561587272 ,-73.2000212862283],
   'images/Image (114).jpg':[44.48086107716006 ,-73.2016715055704],
   'images/Image (115).jpg':[44.46882113460664 ,-73.1952684020996],
   'images/Image (116).jpg':[44.478117224244485 ,-73.19594700098037],
@@ -295,7 +292,6 @@ locations_dictionary={
   'images/Image (119).jpg':[44.47806555149576 ,-73.19644857406615],
   'images/Image (120).jpg':[44.477935412518434 ,-73.1957726573944],
   'images/Image (121).jpg':[44.480442450575644 ,-73.19614816665649],
-  //will have to look over this
   'images/Image (122).jpg':[ 44.472764067071964 ,-73.19711912631988],
   'images/Image (123).jpg':[44.477694271881475 ,-73.19370735645293],
   'images/Image (125).jpg':[44.47136205971179 ,-73.19770653009414],
@@ -307,12 +303,10 @@ locations_dictionary={
   'images/Image (131).jpg':[ 44.47920999647306 ,-73.19916833400725],
   'images/Image (132).jpg':[ 44.4759966901492 ,-73.19671411275863],
   'images/Image (133).jpg':[ 44.47641582709625 ,-73.19802034854888],
-  'images/Image (134).jpg':[ 44.47504358455534 ,-73.19442332269087],
-  //look over 134
+  'images/Image (134).jpg':[ 44.475055665946144 ,-73.19443047324158],
   'images/Image (135).jpg':[ 44.47101011708055 ,-73.1957258863747],
   'images/Image (136).jpg':[ 44.472969027103666 ,-73.19549406852735],
-  'images/Image (137).jpg':[ 44.47326932326606 ,-73.19587062556364],
-  //look iver 137
+  'images/Image (137).jpg':[ 44.47330464728117 ,-73.19594216295529],
   'images/Image (138).jpg':[ 44.472815694099566 ,-73.19497290044657],
   'images/Image (139).jpg':[ 44.47828200413799 ,-73.20093774685517],
   'images/Image (140).jpg':[ 44.47985267254186 ,-73.19908656414415],
@@ -378,16 +372,6 @@ function initMap(lat, lng, zoom) {
         tilt: 0
     })
 
-    // marker = new google.maps.Marker({
-    //   position: { lat: 44.4781, lng: -73.1975 },
-    //   map:map,
-    //   icon: "./images/markers-Photoroom.png",
-    //   title: "Guess",
-    //   draggable: true
-    // })
-
-  //currentImage++;
-
   map.addListener('click', function(event){
     cood = true;
   
@@ -421,19 +405,9 @@ const guessButton = document.getElementById("nextBtn");
 guessButton.addEventListener("click", doGuess);
 
 function doGuess(){
-  // console.log(document.getElementById("result"));
   
   if(guessed == false){
       
-    // if(cood == false){
-    //   alert("guess first")
-    // }
-    // while(guessed == false){
-    //   if(longitude == 0){
-    //     alert('Please guess first');
-
-    //   }
-    // }
     document.getElementById("btnVal").innerHTML = "Next";
     guessed = true;
     if(typeof marker !== 'undefined'){
@@ -474,34 +448,34 @@ function doGuess(){
 
     var result = Math.round(exactResult);
     var points = 0;
-    if (result > 2640){
+    if (result > 3960){
       points = 0;
     }
-    else if (result <= 2640 && result > 1980){
+    else if (result <= 3960 && result > 3140){
       points = 1;
     }
-    else if (result <= 1980 && result > 1320){
+    else if (result <= 3140 && result > 2520){
       points = 2;
     }
-    else if (result <= 1320 && result > 980){
+    else if (result <= 2520 && result > 2140){
       points = 3;
     }
-    else if (result <= 980 && result > 660){
+    else if (result <= 2140 && result > 1860){
       points = 4;
     }
-    else if (result <= 660 && result > 500){
+    else if (result <= 1860 && result > 1320){
       points = 5;
     }
-    else if (result <= 500 && result > 350){
+    else if (result <= 1320 && result > 950){
       points = 6;
     }
-    else if (result <= 350 && result > 220){
+    else if (result <= 950 && result > 620){
       points = 7;
     }
-    else if (result <= 220 && result > 100){
+    else if (result <= 620 && result > 200){
       points = 8;
     }
-    else if (result <= 100 && result > 20){
+    else if (result <= 200 && result > 45){
       points = 9;
     }
     else{
@@ -526,7 +500,7 @@ function doGuess(){
 
     document.getElementById("result").innerHTML = exclamations[points] + ' Your guess was \n' + result + '\n feet away (' + (exactResult / 5280).toFixed(2) + ' miles). You scored ' + points + '/10 points.';
 
-    if(roundNum == 1){
+    if(roundNum == 0){
       document.getElementById("points").innerHTML = '';
     }
     else{
@@ -599,10 +573,6 @@ function doGuess(){
     document.getElementById("result").innerHTML = '';
     guessed = false;
     longitude = 0;
-
-    if(roundNum == 1){
-      document.getElementById("points").innerHTML = '';
-    }
   }
 }
 

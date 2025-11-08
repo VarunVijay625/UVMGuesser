@@ -231,9 +231,36 @@ body {
     border-radius: 15%;
 }
 
+#againBtn:hover{
+    background-color:limegreen;
+    cursor: pointer;
+}
+
 #about{
     margin-left: 4%;
+    margin-right: 15%;
     margin-top: auto;
+    font-size:x-large;
+}
+
+#creds{
+    margin-left: 4%;
+    margin-right: 15%;
+    margin-top: 1%;
+    font-size:x-large;
+}
+
+#submit{
+    margin-left: 4%;
+    margin-right: 15%;
+    margin-top: 1%;
+    font-size:x-large;
+}
+
+#vv{
+    width: 20%;
+    margin-left: 30%;
+    margin-top: 1%;
 }
 
 #vid{
