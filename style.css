@@ -3,7 +3,7 @@
     padding: 0;
 }
 .background-image {
-    background-image: url("./images/hi.jpg");
+    background-image: url("./images/hi-new.jpg");
     background-size: cover;
     margin-top: -2%;
     width: 100vw;
@@ -23,14 +23,14 @@ h1 {
     margin-left: 12%;
     font-size: 450%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color:green;
+    background-color:rgb(31, 131, 52);
     transition: 400ms;
     padding: 10px;
     border-radius: 15%;
     margin-top: 40%;
 }
 .mainbtn:hover {
-    background-color:limegreen;
+    background-color:rgb(61, 161, 82);
     cursor: pointer;
 }
 .otherbtn{
@@ -150,7 +150,7 @@ body {
 
 
 #index {
-    background-color:rgb(22, 117, 49);
+    background-color:rgb(21, 71, 52);
 }
 
 #image{
@@ -290,10 +290,6 @@ body {
         font-size: 14px; /* Smaller font size for mobile */
     }
 
-    .mobile-only-element {
-        display: block; /* Or flex, grid, etc. */
-    }
-
     .background-image {
         background-image: url("./images/hi-phone.jpg");
         background-size: cover;
@@ -308,8 +304,8 @@ body {
         display: none; /* Hide elements meant only for desktop */
     }
 
-    #pic-contain{
-    width: 40%;
+    #image{
+    width: 80%;
     height: 40%;
     margin-top: 3%;
     margin-left: 10%;
@@ -318,10 +314,10 @@ body {
 
 
     #map{
-    height: 55%;
-    width: 905%;
-    margin-left: 10%;
-    margin-top: 500%;
+    height: 50%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
     }
 
 
@@ -375,6 +371,73 @@ body {
     .lastbtn:hover {
         background-color:limegreen;
         cursor: pointer;
+    }
+
+    #round{
+    font-size: 300%;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: -13%;
+    margin-left: 23%;
+    }
+
+    #result{
+        font-size: 200%;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-left: 23%;
+        word-wrap: break-word;
+        width: 35%;
+    }
+
+    #points{
+        font-size: 150%;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-left: 23%;
+        margin-bottom: 15%;
+    }
+
+
+    #over{
+    font-size: 800%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    color:black;
+    margin-top: -90%;
+    }
+
+    #congrats{
+        font-size: 200%;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        color:black;
+    }
+
+    #over{
+        visibility: hidden;
+        margin-top: -50%;
+    }
+
+    #congrats{
+        visibility: hidden;
+    }
+
+    #stars{
+        visibility: hidden;
+        margin-left: 30%;
+    }
+
+    #againBtn{
+        visibility: hidden;
+        color:black;
+        display:block;
+        margin-top: 3%;
+        margin-left: 45%;
+        font-size: 250%;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color:green;
+        transition: 400ms;
+        padding: 10px;
+        border-radius: 15%;
     }
 
 }
