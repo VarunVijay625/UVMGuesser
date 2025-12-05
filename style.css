@@ -125,7 +125,7 @@ h1 {
 }
 
 #nextBtn:disabled {
-    background-color:rgb(90, 138, 90);
+    background-color:rgb(133, 138, 90);
     cursor: pointer;
 }
 
